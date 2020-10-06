@@ -1,0 +1,72 @@
+.hero {
+    height: 100vh;
+    background-image: url(../assets/img/portada.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero .contenedor {
+    height: 100vh;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.contenido .titulo {
+    margin: 0;
+    color: rebeccapurple;
+    text-align: center;
+    font-size: 40px;
+    -webkit-text-stroke: 2px white;    
+}
+
+.contenido ul  {
+    list-style: none;     
+    margin-top: 50px;
+}
+
+.contenido ul li {
+    text-align: center;
+    color: white;
+    padding: 1rem;  
+    margin: 1rem;
+    background-color: rebeccapurple;
+    border: 3px solid black;
+    width: 250px;
+    border-radius: 10px;  
+}
+
+@media only screen and (min-width: 800px) {
+    .hero .contenedor .contenido h1 {
+        font-size: 60px;
+    }
+
+    .hero .contenido {        
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+
+    .contenido ul  {
+        flex-direction: row;
+        position: relative;        
+        top: -100px;
+        list-style: none;                  
+        display: flex;
+        justify-content: space-around;
+        
+    }
+
+    .contenido ul li :hover {
+        background-color: red;
+        
+    }
+}
+
+.hero ul li a :hover {
+    background-color: darken($color: #000000, $amount: 3);
+}
